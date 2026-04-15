@@ -118,9 +118,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
     try {
       await action();
     } catch (actionError) {
-      setError(
-        actionError instanceof Error ? actionError.message : "Steffan, something went wrong."
-      );
+      setError(actionError instanceof Error ? actionError.message : "Something went wrong.");
     } finally {
       setBusyAction(null);
     }
@@ -145,7 +143,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         body: JSON.stringify(form)
       });
 
-      setMessage(`Steffan, the lead for ${payload.lead.first_name} ${payload.lead.last_name} has been created.`);
+      setMessage(`The lead for ${payload.lead.first_name} ${payload.lead.last_name} has been created.`);
       setForm(EMPTY_LEAD_FORM);
       await refreshDashboard(payload.lead.id);
     });
@@ -157,7 +155,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         method: "POST"
       });
 
-      setMessage("Steffan, the automation has been advanced to the next demo step.");
+      setMessage("The automation has been advanced to the next demo step.");
       await refreshDashboard(leadId);
     });
   }
@@ -168,7 +166,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         method: "POST"
       });
 
-      setMessage("Steffan, the lead has been marked as replied and the automation has stopped.");
+      setMessage("The lead has been marked as replied and the automation has stopped.");
       await refreshDashboard(leadId);
     });
   }
@@ -179,7 +177,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         method: "POST"
       });
 
-      setMessage("Steffan, your demo data has been restored.");
+      setMessage("The demo data has been restored.");
       await refreshDashboard();
     });
   }
@@ -188,12 +186,12 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
     <main className="page-shell">
       <section className="hero-panel">
         <div>
-          <span className="eyebrow">CRM walkthrough for Steffan Semurath</span>
-          <h1>Steffan, this mobile-ready Porsche lead tracker is tailored to your workflow.</h1>
+          <span className="eyebrow">CRM walkthrough</span>
+          <h1>A mobile-ready Porsche lead tracker tailored to your workflow.</h1>
           <p className="hero-copy">
-            Steffan, this live page is where the pitch becomes tangible: your new Porsche Centre
-            Trinidad inquiries can be captured, scored, tagged, nurtured, and escalated for your
-            personal follow-up without implying any live dealership or Porsche system access.
+            This live page is where the pitch becomes tangible: your new Porsche Centre Trinidad
+            inquiries can be captured, scored, tagged, nurtured, and escalated for your personal
+            follow-up without implying any live dealership or Porsche system access.
           </p>
           <div className="hero-meta">
             <span>{SALES_REP.sales_rep_name}</span>
@@ -203,10 +201,10 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
           </div>
           <div className="action-row">
             <Link href="/" className="ghost-button">
-              Back to your pitch overview
+              Back to the Overview
             </Link>
             <Link href="/automation" className="ghost-button">
-              Open your automation view
+              Open the Automation View
             </Link>
           </div>
         </div>
@@ -217,14 +215,13 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
             onClick={handleReset}
             disabled={busyAction === "reset"}
           >
-            {busyAction === "reset" ? "Resetting..." : "Restore Your Demo Seeds"}
+            {busyAction === "reset" ? "Resetting..." : "Restore Demo Seeds"}
           </button>
           <div className="hero-note">
-            <span className="eyebrow">Steffan&apos;s walkthrough</span>
+            <span className="eyebrow">Walkthrough</span>
             <p>
-              Steffan, on mobile or desktop, you can advance a lead, mark a reply, or add a fresh
-              inquiry to show how your system handles premium follow-up from capture through manual
-              handoff.
+              On mobile or desktop, you can advance a lead, mark a reply, or add a fresh inquiry to
+              show how your system handles premium follow-up from capture through manual handoff.
             </p>
           </div>
         </div>
@@ -243,12 +240,11 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         <article className="panel">
           <div className="panel-header">
             <div>
-              <span className="eyebrow">Your lead intake</span>
-              <h2>Steffan, this is where your fresh inquiries enter the workflow.</h2>
+              <span className="eyebrow">Lead Intake</span>
+              <h2>Create a fresh inquiry.</h2>
             </div>
             <p className="panel-copy">
-              Steffan, your required fields are validated and normalized before the automation
-              sequence begins.
+              Required fields are validated and normalized before the automation sequence begins.
             </p>
           </div>
 
@@ -329,12 +325,12 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         <article className="panel">
           <div className="panel-header">
             <div>
-              <span className="eyebrow">Your rep alerts</span>
-              <h2>Steffan, these are your in-app notifications.</h2>
+              <span className="eyebrow">Rep Alerts</span>
+              <h2>In-app notification surface.</h2>
             </div>
             <p className="panel-copy">
-              Steffan, your hot leads, financing questions, test-drive intent, and replies stay
-              visible inside the dashboard.
+              Hot leads, financing questions, test-drive intent, and replies stay visible inside
+              the dashboard.
             </p>
           </div>
           <div className="alert-list">
@@ -349,14 +345,14 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
         <article className="panel">
           <div className="panel-header">
             <div>
-              <span className="eyebrow">Your lead tracker</span>
-              <h2>Steffan, this is your filterable CRM view.</h2>
+              <span className="eyebrow">Lead Tracker</span>
+              <h2>Filterable CRM view.</h2>
             </div>
           </div>
 
           <div className="toolbar">
             <input
-              placeholder="Search your leads, model, or inquiry"
+              placeholder="Search leads, model, or inquiry"
               value={search}
               onChange={(event) => setSearch(event.target.value)}
             />
@@ -386,7 +382,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
           </div>
 
           <div className="vehicle-breakdown">
-            <span className="eyebrow">Your vehicle interest mix</span>
+            <span className="eyebrow">Vehicle interest mix</span>
             {dashboard.vehicles.map((item) => (
               <div key={item.vehicle} className="vehicle-bar">
                 <div className="stack-row">
@@ -409,7 +405,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
             <>
               <div className="panel-header">
                 <div>
-                  <span className="eyebrow">Your lead detail</span>
+                  <span className="eyebrow">Lead Detail</span>
                   <h2>
                     {selectedLead.first_name} {selectedLead.last_name}
                   </h2>
@@ -458,8 +454,8 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
                   }
                 >
                   {busyAction === `advance-${selectedLead.id}`
-                     ? "Advancing..."
-                    : "Advance This Timeline"}
+                    ? "Advancing..."
+                    : "Advance Timeline"}
                 </button>
                 <button
                   type="button"
@@ -471,8 +467,8 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
                   }
                 >
                   {busyAction === `reply-${selectedLead.id}`
-                     ? "Stopping automation..."
-                    : "Mark This Lead as Replied"}
+                    ? "Stopping automation..."
+                    : "Mark as Replied"}
                 </button>
               </div>
 
@@ -485,8 +481,8 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
               <div className="activity-section">
                 <div className="panel-header">
                   <div>
-                    <span className="eyebrow">Your recent activity</span>
-                    <h3>Steffan, this is the lead timeline.</h3>
+                    <span className="eyebrow">Recent Activity</span>
+                    <h3>Lead timeline.</h3>
                   </div>
                 </div>
                 <div className="activity-list">
@@ -505,7 +501,7 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
           ) : (
             <div className="empty-state">
               <span className="eyebrow">No lead selected</span>
-              <p>Steffan, create or restore your demo data to begin the walkthrough.</p>
+              <p>Create or restore demo data to begin the walkthrough.</p>
             </div>
           )}
         </article>

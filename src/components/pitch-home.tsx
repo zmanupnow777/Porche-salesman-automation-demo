@@ -12,12 +12,12 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
       <section className="hero-panel home-hero">
         <div className="section-stack">
           <div>
-            <span className="eyebrow">Tailored pitch for Steffan Semurath</span>
-            <h1>Steffan, this premium follow-up system is designed around the way you sell Porsche.</h1>
+            <span className="eyebrow">Porsche Centre Trinidad follow-up demo</span>
+            <h1>A premium follow-up system designed around the way you sell Porsche.</h1>
           </div>
           <p className="hero-copy">
-            Steffan, this demo is framed specifically for your role at Porsche Centre Trinidad. It
-            shows how your Instagram, website, showroom, and referral inquiries can be captured,
+            This demo is framed specifically for your role at Porsche Centre Trinidad. It shows how
+            your Instagram, website, showroom, and referral inquiries can be captured,
             prioritized, and followed through with concise, premium messaging.
           </p>
           <div className="hero-meta">
@@ -27,10 +27,10 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
           </div>
           <div className="action-row">
             <Link href="/tracker" className="primary-button">
-              See Your CRM Walkthrough
+              Open the CRM Walkthrough
             </Link>
             <Link href="/automation" className="ghost-button">
-              See Your Automation Sequence
+              Review the Automation Sequence
             </Link>
           </div>
         </div>
@@ -38,8 +38,8 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
         <div className="hero-note">
           <span className="eyebrow">Positioning</span>
           <p>
-            Steffan, this remains a mock-only sample. It does not claim access to Porsche systems,
-            live inboxes, CRM data, or dealership inventory tools.
+            This remains a mock-only sample. It does not claim access to Porsche systems, live
+            inboxes, CRM data, or dealership inventory tools.
           </p>
           <div className="story-card compact-card">
             <span className="eyebrow">Most persuasive live story</span>
@@ -49,13 +49,13 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
                   {featuredLead.first_name} {featuredLead.last_name}
                 </h3>
                 <p>
-                  Steffan, this {featuredLead.vehicle_interest} inquiry gives you a{" "}
+                  This {featuredLead.vehicle_interest} inquiry gives you a{" "}
                   {featuredLead.temperature.toLowerCase()}-intent path, a premium confirmation
-                  email, and alerting that is ready for your personal follow-up.
+                  email, and alerting that is ready for personal follow-up.
                 </p>
               </>
             ) : (
-              <p>Steffan, seeded lead examples will appear here once your demo store is loaded.</p>
+              <p>Seeded lead examples will appear here once the demo store is loaded.</p>
             )}
           </div>
         </div>
@@ -64,7 +64,7 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
       <section className="story-grid">
         <article className="story-card">
           <span className="eyebrow">Speed</span>
-          <h3>Steffan, every lead gets an immediate, polished first response.</h3>
+          <h3>Every lead gets an immediate, polished first response.</h3>
           <p>
             Your first email acknowledges the exact vehicle inquiry and keeps momentum without
             sounding generic or sales-heavy.
@@ -72,7 +72,7 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
         </article>
         <article className="story-card">
           <span className="eyebrow">Prioritization</span>
-          <h3>Steffan, hot leads surface quickly instead of sitting inside a mixed inbox.</h3>
+          <h3>Hot leads surface quickly instead of sitting inside a mixed inbox.</h3>
           <p>
             Your test-drive requests, financing intent, and short timelines automatically raise
             temperature and trigger in-app alerts.
@@ -80,7 +80,7 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
         </article>
         <article className="story-card">
           <span className="eyebrow">Brand fit</span>
-          <h3>Steffan, the tone stays aligned with Porsche and the sales experience you want.</h3>
+          <h3>The tone stays aligned with Porsche and the sales experience you want.</h3>
           <p>
             Your messaging stays warm, restrained, and premium rather than feeling like low-end
             marketing automation.
@@ -92,7 +92,7 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
         <div className="panel-header">
           <div>
             <span className="eyebrow">Demo Snapshot</span>
-            <h2>Steffan, here is what your seeded walkthrough already demonstrates.</h2>
+            <h2>What the seeded walkthrough already demonstrates.</h2>
           </div>
           <p className="panel-copy">
             These numbers come from the live seeded data that supports your CRM and automation
@@ -109,32 +109,31 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
       <section className="walkthrough-grid">
         <article className="story-card">
           <span className="eyebrow">Page 1</span>
-          <h3>Your Pitch</h3>
-          <p>Steffan, this page leads with the business case tailored to the way you sell.</p>
+          <h3>Overview</h3>
+          <p>This page leads with the business case tailored to the way you sell.</p>
           <Link href="/" className="text-link">
-            This is your opening page
+            This is the opening page
           </Link>
         </article>
         <article className="story-card">
           <span className="eyebrow">Page 2</span>
-          <h3>Your CRM View</h3>
+          <h3>CRM View</h3>
           <p>
-            Steffan, this page shows your intake, lead scoring, tags, alerts, and live timeline
-            controls.
+            This page shows your intake, lead scoring, tags, alerts, and live timeline controls.
           </p>
           <Link href="/tracker" className="text-link">
-            Open your CRM view
+            Open the CRM view
           </Link>
         </article>
         <article className="story-card">
           <span className="eyebrow">Page 3</span>
-          <h3>Your Automation View</h3>
+          <h3>Automation View</h3>
           <p>
-            Steffan, this page walks through your three-email cadence, branching logic, and
-            reply-stop behavior.
+            This page walks through your three-email cadence, branching logic, and reply-stop
+            behavior.
           </p>
           <Link href="/automation" className="text-link">
-            Open your automation view
+            Open the automation view
           </Link>
         </article>
       </section>
