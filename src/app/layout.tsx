@@ -5,9 +5,9 @@ import "@/app/globals.css";
 import { SiteNav } from "@/components/site-nav";
 
 export const metadata: Metadata = {
-  title: "Steffan Semurath Porsche Demo",
+  title: "Steffan Semurath | Porsche Follow-Up Demo",
   description:
-    "Tailored multi-page, mobile-ready Porsche follow-up automation demo for Steffan Semurath."
+    "Steffan, this is your tailored multi-page, mobile-ready Porsche follow-up automation demo."
 };
 
 export default function RootLayout({

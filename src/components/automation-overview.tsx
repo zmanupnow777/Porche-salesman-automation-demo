@@ -13,7 +13,7 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
       <main className="page-shell page-stack">
         <section className="panel empty-state">
           <span className="eyebrow">Automation page</span>
-          <p>No lead data is available yet. Reset the demo seeds and reload.</p>
+          <p>Steffan, no lead data is available yet. Reset your demo seeds and reload.</p>
         </section>
       </main>
     );
@@ -25,11 +25,11 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
         <div className="section-stack">
           <div>
             <span className="eyebrow">Automation view for Steffan Semurath</span>
-            <h1>Every inquiry gets a premium next step without feeling over-automated.</h1>
+            <h1>Steffan, every inquiry gets a premium next step without feeling over-automated.</h1>
           </div>
           <p className="hero-copy">
-            The sequence stays short, personal, and premium. It acknowledges the vehicle of
-            interest, adapts by inquiry type, and hands the conversation back to Steffan as soon as
+            Steffan, your sequence stays short, personal, and premium. It acknowledges the vehicle
+            of interest, adapts by inquiry type, and hands the conversation back to you as soon as
             the lead replies.
           </p>
           <div className="hero-meta">
@@ -39,10 +39,10 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
           </div>
           <div className="action-row">
             <Link href="/tracker" className="primary-button">
-              Open Live CRM Demo
+              Open Your Live CRM View
             </Link>
             <Link href="/" className="ghost-button">
-              Back to pitch overview
+              Back to your pitch overview
             </Link>
           </div>
         </div>
@@ -52,15 +52,15 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
           <div className="section-stack">
             <div className="story-card compact-card">
               <h3>Test drive</h3>
-              <p>Shift the CTA toward preferred day and time, then surface a fast rep alert.</p>
+              <p>Steffan, your CTA shifts toward preferred day and time, then surfaces a fast rep alert.</p>
             </div>
             <div className="story-card compact-card">
               <h3>Financing</h3>
-              <p>Acknowledge financing interest and treat the lead as higher-intent sooner.</p>
+              <p>Steffan, your financing inquiries are acknowledged and treated as higher-intent sooner.</p>
             </div>
             <div className="story-card compact-card">
               <h3>Trade-in or reply</h3>
-              <p>Move the conversation to manual follow-up instead of continuing automated sends.</p>
+              <p>Steffan, the conversation moves to your manual follow-up instead of continued automated sends.</p>
             </div>
           </div>
         </div>
@@ -76,8 +76,8 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
               </h2>
             </div>
             <p className="panel-copy">
-              This example demonstrates the exact personalized copy and status progression visible
-              in the CRM page.
+              Steffan, this example demonstrates the exact personalized copy and status progression
+              visible in your CRM page.
             </p>
           </div>
           <div className="timeline-grid">
@@ -91,28 +91,28 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
           <div className="panel-header">
             <div>
               <span className="eyebrow">Manual handoff logic</span>
-              <h2>When Steffan should step in</h2>
+              <h2>Steffan, here is when you should step in.</h2>
             </div>
           </div>
           <div className="story-card compact-card">
             <h3>Reply-stop behavior</h3>
             <p>
-              The moment a lead replies, the remaining automation stops, the lead is tagged for
-              manual follow-up, and a rep alert is created.
+              Steffan, the moment a lead replies, the remaining automation stops, the lead is
+              tagged for your manual follow-up, and a rep alert is created.
             </p>
           </div>
           <div className="story-card compact-card">
             <h3>High-intent triggers</h3>
             <p>
-              Hot temperature, financing questions, and test-drive interest remain visible in the
-              in-app alerts feed without relying on external systems.
+              Steffan, hot temperature, financing questions, and test-drive interest remain visible
+              in your in-app alerts feed without relying on external systems.
             </p>
           </div>
           <div className="story-card compact-card">
             <h3>Mobile-readiness</h3>
             <p>
-              The layout stacks into a single-column walkthrough so the pitch still reads cleanly
-              on a phone during a live demo.
+              Steffan, the layout stacks into a single-column walkthrough so your pitch still reads
+              cleanly on a phone during a live demo.
             </p>
           </div>
         </article>
@@ -123,7 +123,7 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
           <div className="panel-header">
             <div>
               <span className="eyebrow">Rep alerts</span>
-              <h2>What Steffan sees when a lead heats up</h2>
+              <h2>Steffan, this is what you see when a lead heats up.</h2>
             </div>
           </div>
           <div className="alert-list">
@@ -136,21 +136,21 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
         <article className="panel section-stack">
           <div className="panel-header">
             <div>
-              <span className="eyebrow">Presenter angle</span>
-              <h2>How to narrate the automation page</h2>
+              <span className="eyebrow">What this proves for you</span>
+              <h2>Steffan, this is what your automation page proves.</h2>
             </div>
           </div>
           <div className="story-card compact-card">
             <h3>1. Capture</h3>
-            <p>Show that a new inquiry is instantly acknowledged with model-specific copy.</p>
+            <p>Steffan, a new inquiry is instantly acknowledged with model-specific copy.</p>
           </div>
           <div className="story-card compact-card">
             <h3>2. Nurture</h3>
-            <p>Advance the accelerated timeline to prove the follow-up sequence is structured.</p>
+            <p>Steffan, your accelerated timeline proves the follow-up sequence is structured.</p>
           </div>
           <div className="story-card compact-card">
             <h3>3. Convert</h3>
-            <p>Mark a reply and show the automation stopping so Steffan takes over personally.</p>
+            <p>Steffan, once a reply lands, the automation stops so you take over personally.</p>
           </div>
         </article>
       </section>

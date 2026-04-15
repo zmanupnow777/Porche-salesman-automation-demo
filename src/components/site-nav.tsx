@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/format";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Pitch" },
-  { href: "/tracker", label: "CRM Demo" },
-  { href: "/automation", label: "Automation" }
+  { href: "/", label: "Your Pitch" },
+  { href: "/tracker", label: "Your CRM" },
+  { href: "/automation", label: "Your Automation" }
 ];
 
 export function SiteNav() {
@@ -19,7 +19,7 @@ export function SiteNav() {
       <div className="page-shell nav-shell">
         <Link href="/" className="brand-lockup">
           <span className="brand-title">Steffan Semurath Demo</span>
-          <span className="brand-subtitle">Porsche Centre Trinidad follow-up automation</span>
+          <span className="brand-subtitle">Steffan, this is your Porsche Centre Trinidad follow-up demo</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {NAV_ITEMS.map((item) => {
