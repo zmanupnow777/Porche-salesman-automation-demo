@@ -1,0 +1,159 @@
+import Link from "next/link";
+
+import { AlertItem, EmailStepCard } from "@/components/dashboard-primitives";
+import { SALES_REP } from "@/lib/config";
+import { formatDateTime } from "@/lib/format";
+import { DashboardSnapshot } from "@/lib/types";
+
+export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }) {
+  const featuredLead = snapshot.leads.find((lead) => lead.temperature === "Hot") ?? snapshot.leads[0];
+
+  if (!featuredLead) {
+    return (
+      <main className="page-shell page-stack">
+        <section className="panel empty-state">
+          <span className="eyebrow">Automation page</span>
+          <p>No lead data is available yet. Reset the demo seeds and reload.</p>
+        </section>
+      </main>
+    );
+  }
+
+  return (
+    <main className="page-shell page-stack">
+      <section className="hero-panel">
+        <div className="section-stack">
+          <div>
+            <span className="eyebrow">Automation view for Steffan Semurath</span>
+            <h1>Every inquiry gets a premium next step without feeling over-automated.</h1>
+          </div>
+          <p className="hero-copy">
+            The sequence stays short, personal, and premium. It acknowledges the vehicle of
+            interest, adapts by inquiry type, and hands the conversation back to Steffan as soon as
+            the lead replies.
+          </p>
+          <div className="hero-meta">
+            <span>{SALES_REP.sales_rep_name}</span>
+            <span>{featuredLead.vehicle_interest}</span>
+            <span>Next scheduled step: {formatDateTime(featuredLead.next_email_at)}</span>
+          </div>
+          <div className="action-row">
+            <Link href="/tracker" className="primary-button">
+              Open Live CRM Demo
+            </Link>
+            <Link href="/" className="ghost-button">
+              Back to pitch overview
+            </Link>
+          </div>
+        </div>
+
+        <div className="hero-note">
+          <span className="eyebrow">Branching summary</span>
+          <div className="section-stack">
+            <div className="story-card compact-card">
+              <h3>Test drive</h3>
+              <p>Shift the CTA toward preferred day and time, then surface a fast rep alert.</p>
+            </div>
+            <div className="story-card compact-card">
+              <h3>Financing</h3>
+              <p>Acknowledge financing interest and treat the lead as higher-intent sooner.</p>
+            </div>
+            <div className="story-card compact-card">
+              <h3>Trade-in or reply</h3>
+              <p>Move the conversation to manual follow-up instead of continuing automated sends.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="split-grid">
+        <article className="panel section-stack">
+          <div className="panel-header">
+            <div>
+              <span className="eyebrow">Featured lead path</span>
+              <h2>
+                {featuredLead.first_name} {featuredLead.last_name}
+              </h2>
+            </div>
+            <p className="panel-copy">
+              This example demonstrates the exact personalized copy and status progression visible
+              in the CRM page.
+            </p>
+          </div>
+          <div className="timeline-grid">
+            {featuredLead.email_steps.map((step) => (
+              <EmailStepCard key={step.key} step={step} />
+            ))}
+          </div>
+        </article>
+
+        <article className="panel section-stack">
+          <div className="panel-header">
+            <div>
+              <span className="eyebrow">Manual handoff logic</span>
+              <h2>When Steffan should step in</h2>
+            </div>
+          </div>
+          <div className="story-card compact-card">
+            <h3>Reply-stop behavior</h3>
+            <p>
+              The moment a lead replies, the remaining automation stops, the lead is tagged for
+              manual follow-up, and a rep alert is created.
+            </p>
+          </div>
+          <div className="story-card compact-card">
+            <h3>High-intent triggers</h3>
+            <p>
+              Hot temperature, financing questions, and test-drive interest remain visible in the
+              in-app alerts feed without relying on external systems.
+            </p>
+          </div>
+          <div className="story-card compact-card">
+            <h3>Mobile-readiness</h3>
+            <p>
+              The layout stacks into a single-column walkthrough so the pitch still reads cleanly
+              on a phone during a live demo.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section className="top-grid">
+        <article className="panel">
+          <div className="panel-header">
+            <div>
+              <span className="eyebrow">Rep alerts</span>
+              <h2>What Steffan sees when a lead heats up</h2>
+            </div>
+          </div>
+          <div className="alert-list">
+            {snapshot.alerts.slice(0, 4).map((alert) => (
+              <AlertItem key={alert.id} {...alert} />
+            ))}
+          </div>
+        </article>
+
+        <article className="panel section-stack">
+          <div className="panel-header">
+            <div>
+              <span className="eyebrow">Presenter angle</span>
+              <h2>How to narrate the automation page</h2>
+            </div>
+          </div>
+          <div className="story-card compact-card">
+            <h3>1. Capture</h3>
+            <p>Show that a new inquiry is instantly acknowledged with model-specific copy.</p>
+          </div>
+          <div className="story-card compact-card">
+            <h3>2. Nurture</h3>
+            <p>Advance the accelerated timeline to prove the follow-up sequence is structured.</p>
+          </div>
+          <div className="story-card compact-card">
+            <h3>3. Convert</h3>
+            <p>Mark a reply and show the automation stopping so Steffan takes over personally.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  );
+}
