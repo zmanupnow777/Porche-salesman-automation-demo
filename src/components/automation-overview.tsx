@@ -33,7 +33,6 @@ export function AutomationOverview({ snapshot }: { snapshot: DashboardSnapshot }
             lead replies.
           </p>
           <div className="hero-meta">
-            <span>{SALES_REP.sales_rep_name}</span>
             <span>{featuredLead.vehicle_interest}</span>
             <span>Next scheduled step: {formatDateTime(featuredLead.next_email_at)}</span>
           </div>

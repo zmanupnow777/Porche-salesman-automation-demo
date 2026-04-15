@@ -7,7 +7,7 @@ import { SiteNav } from "@/components/site-nav";
 export const metadata: Metadata = {
   title: "Steffan Semurath | Porsche Follow-Up Demo",
   description:
-    "Steffan, this is your tailored multi-page, mobile-ready Porsche follow-up automation demo."
+    "Tailored multi-page, mobile-ready Porsche follow-up automation demo for Porsche Centre Trinidad."
 };
 
 export default function RootLayout({

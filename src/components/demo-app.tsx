@@ -194,7 +194,6 @@ export function DemoApp({ initialDashboard }: { initialDashboard: DashboardSnaps
             follow-up without implying any live dealership or Porsche system access.
           </p>
           <div className="hero-meta">
-            <span>{SALES_REP.sales_rep_name}</span>
             <span>Porsche Brand Ambassador</span>
             <span>{SALES_REP.dealership_name}</span>
             <span>{SALES_REP.location}</span>

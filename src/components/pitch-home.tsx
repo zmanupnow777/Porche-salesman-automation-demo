@@ -21,7 +21,6 @@ export function PitchHome({ snapshot }: { snapshot: DashboardSnapshot }) {
             prioritized, and followed through with concise, premium messaging.
           </p>
           <div className="hero-meta">
-            <span>{SALES_REP.sales_rep_name}</span>
             <span>Porsche Brand Ambassador</span>
             <span>{SALES_REP.dealership_name}</span>
           </div>
